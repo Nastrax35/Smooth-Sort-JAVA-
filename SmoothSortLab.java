@@ -75,7 +75,7 @@ public class SmoothSortLab {
             p = p - 1;
         }
 
-        // Второй этап: финальное упорядочивание (механизм вставок)
+        // Второй этап: финальное упорядочивание
         // Это обеспечивает адаптивность на почти отсортированных данных
         for (int i = 0; i < n - 1; i++) {
             int j = i + 1;
@@ -130,7 +130,11 @@ public class SmoothSortLab {
         for (int i = 1; i <= count; i++) {
             int size = i * step;
             // Чтение данных
+
             int[] data = readDataFromFile("data/set_" + size + ".txt");
+
+//            int[] data = new int[size];
+//            for(int j=0; j<size; j++) data[j] = j;  - Полностью отсортированный массив
 
             // ИЗМЕРЕНИЕ: только работа алгоритма
             long startTime = System.nanoTime();
